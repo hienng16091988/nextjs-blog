@@ -5,6 +5,7 @@ import { prisma } from "@/lib/db";
 import { RegisterFormSchema } from "@/lib/rules";
 import { email } from "zod";
 import { redirect } from 'next/navigation';
+import { createSession } from '@/lib/sessions';
 
 export async function register(state, formData) {
   const validateFields = RegisterFormSchema.safeParse({
@@ -43,7 +44,9 @@ export async function register(state, formData) {
     },
   });
 
-  console.log(result);
+  //console.log(result);
+
+  await createSession(result.id.toString());
 
   redirect('/dashboard');
 
