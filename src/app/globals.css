@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+html {
+  font-family: var(--font-poppins);
+}
 @layer base {
   body {
     @apply bg-slate-100;
