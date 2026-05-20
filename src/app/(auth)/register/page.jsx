@@ -6,7 +6,7 @@ import { useActionState } from "react";
 
 export default function Register() {
 
-    const [state, action, isPeding] = useActionState(register, undefined);
+    const [state, action, isPending] = useActionState(register, undefined);
     return (
         <div className="container w-1/2">
             <h1 className="title">Register</h1>
@@ -47,7 +47,7 @@ export default function Register() {
                 <div className="flex items-end gap-4">
                     <button className="btn-primary">Register</button>
 
-                    <Link href="/" className="text-link">or Login here</Link>
+                    <Link href="/login" className="text-link">or Login here</Link>
                 </div>
             </form>
 
