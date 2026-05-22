@@ -16,6 +16,9 @@ export default async function Navigation() {
           authUser ? (
           <div className="flex items-center" >
             <NavLink label="Dashboard" href="/dashboard" />
+            <form action="">
+              <button className="nav-link">Logout</button>
+            </form>
           </div>
           ):
 
